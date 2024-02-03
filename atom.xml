@@ -6,7 +6,7 @@
   <link href="https://262617.xyz/atom.xml" rel="self"/>
   
   <link href="https://262617.xyz/"/>
-  <updated>2024-02-01T07:55:55.911Z</updated>
+  <updated>2024-02-02T10:27:38.895Z</updated>
   <id>https://262617.xyz/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>UNIX网络编程-第一部分</title>
+    <link href="https://262617.xyz/20240202/unix-wang-luo-bian-cheng/1-jian-jie/"/>
+    <id>https://262617.xyz/20240202/unix-wang-luo-bian-cheng/1-jian-jie/</id>
+    <published>2024-02-02T07:00:20.000Z</published>
+    <updated>2024-02-02T10:27:38.895Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="简介和TCP-IP"><a href="#简介和TCP-IP" class="headerlink" title="简介和TCP&#x2F;IP"></a>简介和TCP&#x2F;IP</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h3 id="客户-服务器初识"><a href="#客户-服务器初识" class="headerlink" title="客户&#x2F;服务器初识"></a>客户&#x2F;服务器初识</h3><blockquote><p>编写计算机网络通信程序，首先要确定程序相互通信的<em>协议</em>(protocol)。</p></blockquote><blockquote><p>深入设计协议之前，应该从高层次决断通信由哪个程序发起以及响应在何时产生。举例来说：Web服务器程序是一个长时间运行的<em>守护程序</em>（daemon），它只在响应网络请求时才发送网络信息；协议的另一端客户端是Web浏览器程序，与服务器进程的通信总是由客户进程发起。</p></blockquote><blockquote><p>大多数网络应用就是按照<em>客户</em>（client）和 <em>服务器</em>（server）模式运行的。网络程序一般是由客户端发起请求消息，服务器进程响应请求消息。当然也有复杂的网络应用需要<em>异步回调</em>（asynchronous callback）通信，也就是服务器向客户端发送请求消息。</p></blockquote><blockquote><p>网络应用普遍使用客户&#x2F;服务器模型。</p></blockquote><p><img src="https://gcore.jsdelivr.net/gh/chauity/xximgxx/24-imgs/20240202151728.png" alt="20240202151728"></p><blockquote><p>通常客户每次只与一个服务器进程通信，服务器进程可以同时与多个客户通信。</p></blockquote><p><img src="https://gcore.jsdelivr.net/gh/chauity/xximgxx/24-imgs/20240202160827.png" alt="20240202160827"></p><h3 id="TCP-IP协议"><a href="#TCP-IP协议" class="headerlink" title="TCP&#x2F;IP协议"></a>TCP&#x2F;IP协议</h3><blockquote><p>客户端服务器是通过某个网络协议通信的，实际上这个协议涉及多个网络协议层。如TCP&#x2F;IP协议族，也称为网际协议族。Web服务器与客户端之间是通过<em>TCP</em>（Transmission Control Protocol,传输控制协议）通信。TCP又使用IP（Internet Protocol,网际协议）通信。IP下使用某种数据链路层协议通信。下图是处于同一以太网，也是同一<em>局域网</em>（local area network,LAN）的通信层次。</p></blockquote><p><img src="https://gcore.jsdelivr.net/gh/chauity/xximgxx/24-imgs/20240202170526.png" alt="20240202170526"></p><blockquote><p>如上图客户端与服务器通信其中一端向下通过协议栈，跨越网络后，另一端则向上通过协议栈。客户和服务器是用户进程，TCP&#x2F;IP协议是内核中的协议栈。</p></blockquote><blockquote><p>除了TCP之外，有的会客户&#x2F;服务器会改用<em>UDP</em>（User Datagram Protocol,用户数据报协议）。IP协议，1980年以来，一直使用的是<em>IPv4</em>（IP version 4，IP版本4），除此之外还有IPv6（IP version 6，IP版本6）。</p></blockquote><blockquote><p>两个不同局域网中的客户和服务器，连接到<em>广域网</em>（wide area network，WAN）如下图。</p></blockquote><p><img src="https://gcore.jsdelivr.net/gh/chauity/xximgxx/24-imgs/20240202173926.png" alt="20240202173926"></p><blockquote><p>广域网使用<em>路由器</em>（router）连接不同的局域网。路由器是网络设备，可以转发不同局域网中的数据包。当今最大的广域网是英特网（Internet）。</p></blockquote><h2 id="时间获取客户程序"><a href="#时间获取客户程序" class="headerlink" title="时间获取客户程序"></a>时间获取客户程序</h2><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;简介和TCP-IP&quot;&gt;&lt;a href=&quot;#简介和TCP-IP&quot; class=&quot;headerlink&quot; title=&quot;简介和TCP&amp;#x2F;IP&quot;&gt;&lt;/a&gt;简介和TCP&amp;#x2F;IP&lt;/h1&gt;&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;he</summary>
+      
+    
+    
+    
+    <category term="网络编程" scheme="https://262617.xyz/categories/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="网络编程" scheme="https://262617.xyz/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>C++关联容器</title>
@@ -121,9 +145,9 @@
     <link href="https://262617.xyz/20240129/ji-zhu/"/>
     <id>https://262617.xyz/20240129/ji-zhu/</id>
     <published>2024-01-29T08:51:00.000Z</published>
-    <updated>2024-02-01T08:02:07.757Z</updated>
+    <updated>2024-02-01T08:09:46.692Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="分类-技术"><a href="#分类-技术" class="headerlink" title="分类-技术"></a>分类-技术</h1><h2 id="C-C"><a href="#C-C" class="headerlink" title="C&#x2F;C++"></a>C&#x2F;C++</h2><ol><li><a href="/20240129/c-yu-yan-xi-lie/c-mo-ban-bian-cheng/">C++模板编程</a></li><li><a href="/20240130/c-yu-yan-xi-lie/c-die-dai-qi/">C++迭代器</a></li><li><a href="/20240130/c-yu-yan-xi-lie/c-shun-xu-rong-qi/">C++顺序容器</a></li><li><a href="/20240201/c-yu-yan-xi-lie/c-guan-lian-rong-qi/">C++关联容器</a></li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="分类-技术"><a href="#分类-技术" class="headerlink" title="分类-技术"></a>分类-技术</h1><h2 id="C-C"><a href="#C-C" class="headerlink" title="C&#x2F;C++"></a>C&#x2F;C++</h2><ol><li><a href="/20240129/c-yu-yan-xi-lie/c-mo-ban-bian-cheng/">C++模板编程</a></li><li><a href="/20240130/c-yu-yan-xi-lie/c-die-dai-qi/">C++迭代器</a></li><li><a href="/20240130/c-yu-yan-xi-lie/c-shun-xu-rong-qi/">C++顺序容器</a></li><li><a href="/20240201/c-yu-yan-xi-lie/c-guan-lian-rong-qi/">C++关联容器</a></li><li><a href="/20240201/c-yu-yan-xi-lie/c-she-ji-mo-shi/">C++设计模式</a></li></ol>]]></content>
     
     
       
