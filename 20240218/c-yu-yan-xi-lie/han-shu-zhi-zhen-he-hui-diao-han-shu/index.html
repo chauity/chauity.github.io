@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类-技术, SHUSHU">
+    <meta name="keywords" content="函数指针和回调函数, SHUSHU">
     <meta name="description" content="build your blog">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分类-技术 | SHUSHU</title>
+    <title>函数指针和回调函数 | SHUSHU</title>
     <link rel="icon" type="image/png" href="https://gcore.jsdelivr.net/gh/chauity/images/logo/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -511,12 +511,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://gcore.jsdelivr.net/gh/chauity/xximgxx/feature-imgs/26.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gcore.jsdelivr.net/gh/chauity/xximgxx/feature-imgs/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">分类-技术</h1>
+                    <h1 class="description center-align post-title">函数指针和回调函数</h1>
                 </div>
             </div>
         </div>
@@ -633,8 +633,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%88%86%E7%B1%BB-%E6%8A%80%E6%9C%AF/">
-                                <span class="chip bg-color">分类-技术</span>
+                            <a href="/tags/C-C-%E7%B3%BB%E5%88%97/">
+                                <span class="chip bg-color">C/C++系列</span>
                             </a>
                         
                     </div>
@@ -645,8 +645,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%88%86%E7%B1%BB-%E6%8A%80%E6%9C%AF/" class="post-category">
-                                分类-技术
+                            <a href="/categories/C-C-%E7%B3%BB%E5%88%97/" class="post-category">
+                                C/C++系列
                             </a>
                         
                     </div>
@@ -658,28 +658,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-01-29
+                    2024-02-18
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-02-01
+                    2024-02-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    31
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 
@@ -702,13 +702,132 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="分类-技术"><a href="#分类-技术" class="headerlink" title="分类-技术"></a>分类-技术</h1><h2 id="C-C"><a href="#C-C" class="headerlink" title="C&#x2F;C++"></a>C&#x2F;C++</h2><ol>
-<li><a href="/20240129/c-yu-yan-xi-lie/c-mo-ban-bian-cheng/">C++模板编程</a></li>
-<li><a href="/20240130/c-yu-yan-xi-lie/c-die-dai-qi/">C++迭代器</a></li>
-<li><a href="/20240130/c-yu-yan-xi-lie/c-shun-xu-rong-qi/">C++顺序容器</a></li>
-<li><a href="/20240201/c-yu-yan-xi-lie/c-guan-lian-rong-qi/">C++关联容器</a></li>
-<li><a href="/20240201/c-yu-yan-xi-lie/c-she-ji-mo-shi/">C++设计模式</a></li>
-</ol>
+                <p><a target="_blank" rel="noopener" href="https://gcore.jsdelivr.net/gh/chauity/xximgxx/mindmap/%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0.html">本篇文章脑图地址</a></p>
+<h1 id="函数指针和回调函数"><a href="#函数指针和回调函数" class="headerlink" title="函数指针和回调函数"></a>函数指针和回调函数</h1><h2 id="函数指针"><a href="#函数指针" class="headerlink" title="函数指针"></a>函数指针</h2><h3 id="函数指针概括"><a href="#函数指针概括" class="headerlink" title="函数指针概括"></a>函数指针概括</h3><p>函数的二进制代码存放在内存四区的代码段，函数的地址是它在内存中的起始地址。如果把函数地址作为参数传递给函数，那么这个函数就可以调用传递进来的地址所指向的函数。</p>
+<p>使用函数指针三个步骤</p>
+<ul>
+<li>声明函数指针</li>
+<li>让函数指针指向函数的地址</li>
+<li>使用函数指针调用函数</li>
+</ul>
+<h3 id="声明函数指针"><a href="#声明函数指针" class="headerlink" title="声明函数指针"></a>声明函数指针</h3><p>声明普通指针时，必须提供指针的类型。同样，声明函数指针时，也必须提供函数的返回类型和参数列表（函数名，形参名可有可无）。</p>
+<h3 id="函数原型"><a href="#函数原型" class="headerlink" title="函数原型"></a>函数原型</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">func1</span><span class="token punctuation">(</span><span class="token keyword">int</span> id<span class="token punctuation">,</span> string str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">func2</span><span class="token punctuation">(</span><span class="token keyword">int</span> no<span class="token punctuation">,</span> string message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">func3</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">,</span> string info<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">funcx</span><span class="token punctuation">(</span><span class="token keyword">int</span> xxx<span class="token punctuation">,</span> string yyy<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+bool <span class="token function">func5</span><span class="token punctuation">(</span><span class="token keyword">int</span> idx<span class="token punctuation">,</span> string info<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+bool <span class="token function">func6</span><span class="token punctuation">(</span><span class="token keyword">int</span> iii<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>上述函数中，总共三个函数类型<code>func1,fun2,fun3,funx</code>返回值和参数类型相同则是同类型。<code>fun5和func6</code>分别属于不同的函数类型。</p>
+<p>函数指针形式一</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">返回类型(*函数名)(参数列表)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>三种函数类型的函数指针声明如下</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span>  <span class="token punctuation">(</span><span class="token operator">*</span>pfa<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">,</span> string<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// fun1,fun2,fun3,funx</span>
+<span class="token function">bool</span> <span class="token punctuation">(</span><span class="token operator">*</span>pfb<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">,</span> string<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// fun5</span>
+<span class="token function">bool</span> <span class="token punctuation">(</span><span class="token operator">*</span>pfc<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment">// fun6</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h2><h3 id="回调函数概括"><a href="#回调函数概括" class="headerlink" title="回调函数概括"></a>回调函数概括</h3><p>回调函数就是一个通过函数指针调用的函数。如果你把函数的指针（地址）作为参数传递给另一个函数，当这个指针被用来调用其所指向的函数时，我们就说这是回调函数。</p>
+<h3 id="简单案例展示一"><a href="#简单案例展示一" class="headerlink" title="简单案例展示一"></a>简单案例展示一</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;
+using namespace std;
+
+void func(int no, string str)
+&#123;
+	cout &lt;&lt; &quot;今天是星期&quot; &lt;&lt; no &lt;&lt; &quot;，&quot; &lt;&lt; str &lt;&lt; endl;
+&#125;
+
+int main()
+&#123;
+	int day1 &#x3D; 7;
+	string str1 &#x3D; &quot;还在上班，不开心......&quot;;
+	&#x2F;&#x2F; 正常调用函数
+	func(day1, str1);
+
+	&#x2F;&#x2F; 使用函数指针调用函数
+	void (*pfun)(int, string);
+	pfun &#x3D; func;
+	pfun(day1, str1);	&#x2F;&#x2F; 直接用函数名调用
+	(*pfun)(day1, str1);&#x2F;&#x2F; 使用(*函数名)调用
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h3><pre class="line-numbers language-terminal" data-language="terminal"><code class="language-terminal">今天是星期7，还在上班，不开心......
+今天是星期7，还在上班，不开心......
+今天是星期7，还在上班，不开心......<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="简单案例展示二"><a href="#简单案例展示二" class="headerlink" title="简单案例展示二"></a>简单案例展示二</h3><p>假设有一场考试，要测试所有学生的成绩。每个学生的做题习惯和考试风格不同。考试的流程由我们来控制，考生的发挥和老师的评定则由自己来定。</p>
+<p>函数指针形式二，<code>typedef</code> 定义函数指针类型</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">typedef 返回类型(*新类型)(参数列表)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>简单代码实现如下：</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;
+using namespace std;
+
+&#x2F;&#x2F; 考生个人发挥函数
+void studentDoing(int iii)
+&#123;
+	&#x2F;&#x2F; 自定义
+	cout &lt;&lt; &quot;考生&quot; &lt;&lt; iii &lt;&lt; &quot;完成答卷...&quot; &lt;&lt; endl;
+&#125;
+
+&#x2F;&#x2F; 监考老师控制考场函数
+void teacher1Doing(int iii, int jjj)
+&#123;
+	&#x2F;&#x2F; 自定义
+	cout &lt;&lt; &quot;监考老师&quot; &lt;&lt; iii &lt;&lt; &quot;和&quot; &lt;&lt; jjj &lt;&lt; &quot;进行监考...&quot; &lt;&lt; endl;
+&#125;
+
+&#x2F;&#x2F; 任课老师批改成绩函数
+void teacher2Doing(string str)
+&#123;
+	&#x2F;&#x2F; 自定义
+	cout &lt;&lt; &quot;任课老师批改试卷...,&quot; &lt;&lt; str &lt;&lt; endl;
+&#125;
+
+typedef void(*FUNC_SRUDENT)(int);
+typedef void(*FUNC_TEACHER1)(int, int);
+typedef void(*FUNC_TEACHER2)(string);
+
+&#x2F;&#x2F; 组织学生考试函数
+void examination(FUNC_SRUDENT p1, FUNC_TEACHER1 p2, FUNC_TEACHER2 p3, int iii, int jjj, int kkk, string str)
+&#123;
+  &#x2F;&#x2F; 调用监考老师控制考场函数
+	p2(jjj, kkk);
+	&#x2F;&#x2F; 调用考生个人发挥函数
+	p1(iii);
+	&#x2F;&#x2F; 调用任课老师批改成绩函数
+	p3(str);
+&#125;
+
+int main()
+&#123;
+	cout &lt;&lt; &quot;考试开始&quot; &lt;&lt; endl;
+	FUNC_SRUDENT _p1;
+	FUNC_TEACHER1 _p2;
+	FUNC_TEACHER2 _p3;
+	_p1 &#x3D; studentDoing;
+	_p2 &#x3D; teacher1Doing;
+	_p3 &#x3D; teacher2Doing;
+	examination(_p1, _p2, _p3, 1, 12, 13, &quot;改卷子真累啊&quot;);
+	examination(_p1, _p2, _p3, 2, 12, 13, &quot;改卷子真累啊&quot;);
+	examination(_p1, _p2, _p3, 3, 12, 13, &quot;终于改完了啊&quot;);
+	cout &lt;&lt; &quot;公式成绩&quot; &lt;&lt; endl;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>在这个案例中，我们定义了三个函数指针<code>FUNC_SRUDENT, FUNC_TEACHER1, FUNC_TEACHER2</code>，分别指向考生个人发挥函数、监考老师控制考场函数和任课老师批改成绩函数。然后，我们通过函数指针来调用这三个函数。这三个指针被<code>examination</code>函数调用，我们可以说这三个函数就是回调函数。</p>
+<p>代码运行如下</p>
+<pre class="line-numbers language-terminal" data-language="terminal"><code class="language-terminal">考试开始
+监考老师12和13进行监考...
+考生1完成答卷...
+任课老师批改试卷...,改卷子真累啊
+监考老师12和13进行监考...
+考生2完成答卷...
+任课老师批改试卷...,改卷子真累啊
+监考老师12和13进行监考...
+考生3完成答卷...
+任课老师批改试卷...,终于改完了啊
+公式成绩<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
@@ -735,7 +854,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://262617.xyz/20240129/ji-zhu/">https://262617.xyz/20240129/ji-zhu/</a>
+                    <a href="https://262617.xyz/20240218/c-yu-yan-xi-lie/han-shu-zhi-zhen-he-hui-diao-han-shu/">https://262617.xyz/20240218/c-yu-yan-xi-lie/han-shu-zhi-zhen-he-hui-diao-han-shu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -773,8 +892,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%88%86%E7%B1%BB-%E6%8A%80%E6%9C%AF/">
-                                    <span class="chip bg-color">分类-技术</span>
+                                <a href="/tags/C-C-%E7%B3%BB%E5%88%97/">
+                                    <span class="chip bg-color">C/C++系列</span>
                                 </a>
                             
                         </div>
@@ -952,15 +1071,15 @@
                         <i class="fas fa-chevron-left"></i>&nbsp;上一篇
                     </div>
                     <div class="card">
-                        <a href="/20240129/c-yu-yan-xi-lie/c-mo-ban-bian-cheng/">
+                        <a href="/20240218/c-yu-yan-xi-lie/c-she-ji-mo-shi/">
                             <div class="card-image">
                                 
                                         
-                                            <img src="https://gcore.jsdelivr.net/gh/chauity/xximgxx/feature-imgs/23.jpg"
-                                                class="responsive-img" alt="C++模板编程">
+                                            <img src="https://gcore.jsdelivr.net/gh/chauity/xximgxx/feature-imgs/21.jpg"
+                                                class="responsive-img" alt="C++设计模式">
                                             
                                                 <span class="card-title">
-                                                    C++模板编程
+                                                    C++设计模式
                                                 </span>
                             </div>
                         </a>
@@ -973,7 +1092,7 @@
                             <div class="publish-info">
                                 <span class="publish-date">
                                     <i class="far fa-clock fa-fw icon-date"></i>
-                                    2024-01-29
+                                    2024-02-18
                                 </span>
                                 <span class="publish-author">
                                     
@@ -1007,15 +1126,15 @@
                                     下一篇&nbsp;<i class="fas fa-chevron-right"></i>
                                 </div>
                                 <div class="card">
-                                    <a href="/20240118/shi-yong-vscode-yuan-cheng-fu-wu-qi/">
+                                    <a href="/20240202/unix-wang-luo-bian-cheng/1-jian-jie/">
                                         <div class="card-image">
                                             
                                                     
-                                                        <img src="https://gcore.jsdelivr.net/gh/chauity/xximgxx/feature-imgs/15.jpg"
-                                                            class="responsive-img" alt="使用VSCODE远程服务器">
+                                                        <img src="https://gcore.jsdelivr.net/gh/chauity/xximgxx/feature-imgs/24.jpg"
+                                                            class="responsive-img" alt="UNIX网络编程-第一部分">
                                                         
                                                             <span class="card-title">
-                                                                使用VSCODE远程服务器
+                                                                UNIX网络编程-第一部分
                                                             </span>
                                         </div>
                                     </a>
@@ -1028,14 +1147,14 @@
                                         <div class="publish-info">
                                             <span class="publish-date">
                                                 <i class="far fa-clock fa-fw icon-date"></i>
-                                                2024-01-18
+                                                2024-02-02
                                             </span>
                                             <span class="publish-author">
                                                 
                                                     <i class="fas fa-bookmark fa-fw icon-category"></i>
                                                     
-                                                        <a href="/categories/remote-ssh-vscode/" class="post-category">
-                                                            remote ssh + vscode
+                                                        <a href="/categories/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" class="post-category">
+                                                            网络编程
                                                         </a>
                                                         
                                                             
@@ -1045,9 +1164,9 @@
                                     
                                         <div class="card-action article-tags">
                                             
-                                                <a href="/tags/remote-ssh-vscode/">
+                                                <a href="/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">
                                                     <span class="chip bg-color">
-                                                        remote ssh + vscode
+                                                        网络编程
                                                     </span>
                                                 </a>
                                                 
